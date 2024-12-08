@@ -7,8 +7,8 @@ function Footer() {
       <Image
         src="./logo.svg"
         alt="logo"
-        width={47}
         height={44}
+        width={47}
         className="object-contain"
       />
       <div className="flex items-center gap-6">
@@ -37,5 +37,6 @@ function Footer() {
     </footer>
   );
 }
+
 
 export default Footer;
