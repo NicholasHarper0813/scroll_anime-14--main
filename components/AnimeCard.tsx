@@ -1,18 +1,17 @@
-import Image from "next/image";
 import { MotionDiv } from "./MotionDiv";
+import Image from "next/image";
 
 export interface AnimeProp {
   id: string;
   name: string;
-  image: {
-    original: string;
-  };
   kind: string;
   episodes: number;
   episodes_aired: number;
   score: string;
+  image: {
+    original: string;
+  };
 }
-
 interface Prop {
   anime: AnimeProp;
   index: number;
@@ -69,12 +68,12 @@ function AnimeCard({ anime, index }: Prop) {
           <div className="flex flex-row gap-2 items-center">
             <Image
               src="./star.svg"
-              alt="star"
-              width={18}
+              alt="STAR"
               height={18}
+              width={18}
               className="object-contain"
             />
-            <p className="text-base font-bold text-[#FFAD49]">{anime.score}</p>
+            <p className="text-base font-bold text-[#FFBE49]">{anime.score}</p>
           </div>
         </div>
       </div>
