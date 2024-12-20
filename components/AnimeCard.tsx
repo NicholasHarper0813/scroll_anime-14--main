@@ -8,11 +8,13 @@ export interface AnimeProp {
   episodes: number;
   episodes_aired: number;
   score: string;
-  image: {
+  image: 
+  {
     original: string;
   };
 }
-interface Prop {
+interface Prop 
+{
   anime: AnimeProp;
   index: number;
 }
@@ -22,7 +24,8 @@ const variants = {
   visible: { opacity: 1 },
 };
 
-function AnimeCard({ anime, index }: Prop) {
+function AnimeCard({ anime, index }: Prop) 
+{
   return (
     <MotionDiv
       variants={variants}
