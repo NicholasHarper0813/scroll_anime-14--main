@@ -1,5 +1,6 @@
 {
-  "compilerOptions": {
+  "compilerOptions": 
+  {
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "module": "esnext",
@@ -18,7 +19,8 @@
         "name": "next"
       }
     ],
-    "paths": {
+    "paths": 
+    {
       "@/*": ["./*"]
     }
   },
