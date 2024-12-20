@@ -1,13 +1,12 @@
 "use client";
 
+import Image from "next/image";
+import AnimeCard from "./AnimeCard";
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { fetchAnime } from "@/app/action";
-import Image from "next/image";
-import AnimeCard from "./AnimeCard";
 
-let page = 2; // to fetch new pages
-
+let page = 2;
 export type AnimeCard = JSX.Element;
 
 function LoadMore() 
@@ -30,7 +29,6 @@ function LoadMore()
       <section className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10">
         {data}
       </section>
-      {/* this section is for all of the subsequent pages from page one */}
 
       <section className="flex justify-center items-center w-full">
         <div ref={ref}>
