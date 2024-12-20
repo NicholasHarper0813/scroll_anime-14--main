@@ -1,30 +1,29 @@
 "use client";
-// only this will load in server side
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 import { fetchAnime } from "@/app/action";
+import Image from "next/image";
 import AnimeCard from "./AnimeCard";
 
 let page = 2; // to fetch new pages
 
 export type AnimeCard = JSX.Element;
 
-function LoadMore() {
+function LoadMore() 
+{
   const { ref, inView } = useInView();
-  const [data, setData] = useState<AnimeCard[]>([]); // to get an array of AnimeProps
+  const [data, setData] = useState<AnimeCard[]>([]);
 
   useEffect(() => {
-    if (inView) {
-      // alert("load lawde");
+    if (inView) 
+    {
       fetchAnime(page).then((res) => {
         setData([...data, ...res]);
-
-        page++; // increase page numbers
+        page++;
       });
     }
-  }, [inView, data]); // when the spinner hits it run execute
+  }, [inView, data]);
 
   return (
     <>
